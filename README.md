@@ -45,7 +45,7 @@ Now create a new file `.env` and add your public API key here.
 NEXT_PUBLIC_CHEC_PUBLIC_API_KEY=...
 ```
 
-### 2. Create a Commerce.js instance
+<!-- ### 2. Create a Commerce.js instance
 
 With our initial Next.js setup created, and our `@chec/commerce.js` dependency installed, we'll now instantiate a new commerce instance, and make it available to import throughout the rest of our Next.js project.
 
@@ -481,4 +481,4 @@ export default function ProductPage({ product }) {
 
 That's it!
 
-Now you're ready to go! Type `npm run dev` in your Terminal, and head to the local port to browse your Next.js powered commerce site.
+Now you're ready to go! Type `npm run dev` in your Terminal, and head to the local port to browse your Next.js powered commerce site. -->

@@ -15,10 +15,14 @@ export async function getStaticProps() {
 
 export default function ProductsPage({ products }) {
   return (
-    <React.Fragment>
-      <h1>Products</h1>
+    <>
+      <div className="container pt-10">
+        <h1 className="text-2xl pb-3 mb-7 border-b-2 border-solid border-black text-center">
+          All Products
+        </h1>
 
-      <ProductList products={products} />
-    </React.Fragment>
+        <ProductList products={products} />
+      </div>
+    </>
   );
 }

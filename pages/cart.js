@@ -21,7 +21,7 @@ function CartItem({ id, name, quantity, line_total }) {
     commerce.cart.update(id, { quantity: quantity + 1 }).then(handleUpdateCart);
 
   return (
-    <div>
+    <div className="container">
       <p>{name}</p>
       <p>{quantity}</p>
       <p>{line_total.formatted_with_symbol}</p>
@@ -39,10 +39,12 @@ export default function CartPage() {
 
   const isEmpty = line_items.length === 0;
 
-  if (isEmpty) return <p>Your cart is empty</p>;
+  if (isEmpty) return (
+    <div className="container py-20"><p>Your cart is empty</p></div>
+  );
 
   return (
-    <div>
+    <div className="container">
       <h1>Cart</h1>
 
       {line_items.map((item) => (
