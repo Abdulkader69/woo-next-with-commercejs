@@ -8,7 +8,7 @@ export default function ProductList({ products }) {
   return (
     <div className="products-list flex flex-wrap -mx-4">
       {products.map((product) => (
-        <div key={product.permalink} className="product-grid w-1/5 px-4 mb-10">
+        <div key={product.permalink} className="product-grid w-1/5 px-4 mb-[50px]">
           <Link href={`/products/${product.permalink}`}>
             <a>
               <Product {...product} />
