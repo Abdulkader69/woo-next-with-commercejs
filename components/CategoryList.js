@@ -8,9 +8,9 @@ export default function CategoryList({ categories }) {
   return (
     <ul>
       {categories.map((category) => (
-        <li key={category.slug}>
+        <li key={category.slug} className="border-b-2 border-solid border-gray-400 mb-2">
           <Link href={`/categories/${category.slug}`}>
-            <a>
+            <a className="py-1 inline-block">
               <Category {...category} />
             </a>
           </Link>

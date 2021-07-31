@@ -2,6 +2,7 @@ import React from "react";
 
 import commerce from "../../lib/commerce";
 import { useCartDispatch } from "../../context/cart";
+import parse from 'html-react-parser';
 
 export async function getStaticProps({ params }) {
   const { permalink } = params;
@@ -48,8 +49,11 @@ export default function ProductPage({ product }) {
             </div>
           </div>
           <div className="w-6/12 px-4">
-            <h1>{product.name}</h1>
-            <p>{product.price.formatted_with_symbol}</p>
+            <h1 className="text-[35px] font-medium">{product.name}</h1>
+            <p className="text-lg">{product.price.formatted_with_symbol}</p>
+            <div className="description">
+              {parse(product.description)}
+            </div>
             <button onClick={addToCart}>Add to Cart</button>
           </div>
         </div>

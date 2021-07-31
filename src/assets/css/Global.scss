@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.banner-slider {
+    width: calc(100% - 15rem);
+}

@@ -20,7 +20,7 @@ export default function MyApp({ Component, pageProps, router }) {
 
   return (
     <CartProvider>
-      <div id="page_container" className={`${bodyClassName} overflow-hidden`}>
+      <div id="page_container" className={`${bodyClassName} overflow-hidden pt-32`}>
         <Header />
         <Component {...pageProps} />
         <Footer />
