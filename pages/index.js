@@ -5,8 +5,8 @@ import Image from 'next/image'
 import commerce from "../lib/commerce";
 import CategoryList from "../components/CategoryList";
 import ProductList from "../components/ProductList";
-// import Carousel from "react-multi-carousel";
-// import "react-multi-carousel/lib/styles.css";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const responsive = {
   largeDesktop: {
@@ -41,27 +41,27 @@ export default function IndexPage({ merchant, categories, products1, products2 }
   return (
     <>
       <div className="container">
-        <div className="home-banner-section flex mb-7 -mt-1">
+        <div className="home-banner-section flex flex-wrap mb-7 -mt-1">
           <div className="category-area w-60 bg-gray-100 p-4">
             <CategoryList categories={categories} />
             <CategoryList categories={categories} />
             <CategoryList categories={categories} />
           </div>
           <div className="banner-slider">
-            <img className="w-full" src="https://niobium.me/wp-content/uploads/2021/07/banner.png" />
-             {/* <Carousel
+            {/* <img className="w-full" src="https://niobium.me/wp-content/uploads/2021/07/banner.png" /> */}
+             <Carousel
                 responsive={responsive}
                 infinite
-                //   autoPlay
+                autoPlay
                 swipeable
                 draggable
                 arrows={false}
                 showDots
              >
-               <div className="item"><img src="https://niobium.me/wp-content/uploads/2021/07/banner.png" /></div>
-               <div className="item"><img src="https://niobium.me/wp-content/uploads/2021/07/banner.png" /></div>
-               <div className="item"><img src="https://niobium.me/wp-content/uploads/2021/07/banner.png" /></div>
-             </Carousel> */}
+               <div className="item"><img className="pointer-events-none" src="https://niobium.me/wp-content/uploads/2021/07/banner.png" /></div>
+               <div className="item"><img className="pointer-events-none" src="https://niobium.me/wp-content/uploads/2021/08/slide3.jpg" /></div>
+               <div className="item"><img className="pointer-events-none" src="https://niobium.me/wp-content/uploads/2021/08/slide2.jpg" /></div>
+             </Carousel>
           </div>
         </div>
 
